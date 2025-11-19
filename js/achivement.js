@@ -1,3 +1,18 @@
+
+const categories = {
+    hackathon: ["1st Place", "2nd Place", "3rd Place", "Winner", "Participation"],
+    awards: ["1st Place", "2nd Place", "3rd Place", "Winner",  "Participation Certificate"],
+    volunteering: ["Community Service", "Environmental Clean-up", "Event Support"],
+    exchange: ["Exchange Program", "Dual Degree Program"],
+    event: ["Organization", "Speech / Presentation", "Participant"],
+    sports: ["Football", "Basketball", "Swimming", "others"],
+    conference: ["International", "National", "Local"],
+    patent: ["Patent Granted", "Patent Filed"],
+    project: ["Research Project", "Team Project", "Independent Project"],
+    competition: []
+};
+
+
 function fillFormFromProfile() {
     const currentStudent = JSON.parse(localStorage.getItem("currentStudent"));
 
@@ -5,16 +20,32 @@ function fillFormFromProfile() {
         document.getElementById("fullname").value = currentStudent.fullName || "";
         document.getElementById("faculty").value = currentStudent.faculty || "";
         document.getElementById("program").value = currentStudent.program || "";
-        document.getElementById("studentId").value = currentStudent.studentId || "";
+        document.getElementById("studentId").value = currentStudent.studentNumber || "";
     }
 }
 
-
 window.addEventListener("DOMContentLoaded", fillFormFromProfile);
 
-const form = document.querySelector(".achivement__form");
 
-form.addEventListener("submit", function (e) {
+document.getElementById("category").addEventListener("change", function () {
+    const selectedCategory = this.value;
+    const subcatSelect = document.getElementById("subcategory");
+
+
+    subcatSelect.innerHTML = `<option value="">Select subcategory</option>`;
+
+    if (categories[selectedCategory]) {
+        categories[selectedCategory].forEach(sub => {
+            const option = document.createElement("option");
+            option.value = sub;
+            option.textContent = sub;
+            subcatSelect.appendChild(option);
+        });
+    }
+});
+
+
+document.querySelector(".achivement__form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const fullName = document.getElementById("fullname").value;
@@ -41,6 +72,7 @@ form.addEventListener("submit", function (e) {
         coins: 0,
         requestId
     };
+
 
     let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
     achievements.push(newAchievement);

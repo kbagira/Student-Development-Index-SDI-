@@ -9,7 +9,7 @@ if (!localStorage.getItem("students")) {
             program: "Computer Science",
             email: "aiday@alatoo.edu.kg",
             coins: 120,
-            photo: "./img/stud_photo.jpeg",
+            photo: "../img/stud_photo.jpeg",
             achievements: [
                 {
                     description: "Environmental clean-up",
@@ -31,6 +31,7 @@ if (!localStorage.getItem("students")) {
             fullName: "Nursultan A.",
             faculty: "Business Administration",
             program: "Management",
+            profile: "International Management",
             email: "nursultan@alatoo.edu.kg",
             coins: 75,
             photo: "./img/stud_photo.jpeg",
@@ -46,6 +47,5 @@ if (!localStorage.getItem("students")) {
     ];
 
     localStorage.setItem("students", JSON.stringify(students));
-    console.log("Students loaded into LocalStorage");
 }
 

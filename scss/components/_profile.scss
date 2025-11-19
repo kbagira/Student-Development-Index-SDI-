@@ -165,6 +165,21 @@
 
 }
 
+.profile__header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile__header-name,
+.profile__header-admin {
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
 
 .achievements {
     &__content {

@@ -299,6 +299,20 @@
   background: #4a427e;
 }
 
+.profile__header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile__header-name,
+.profile__header-admin {
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
 .achievements__content {
   margin: 30px;
   display: flex;
