@@ -71,3 +71,25 @@ h1 {
 .ranking-table tr:hover {
     background: #f0f5ff;
 }
+
+.select-box {
+    padding: 8px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    width: 180px;       
+    height: 42px;       
+    outline: none;
+    cursor: pointer;
+}
+
+.select-box:focus {
+    border-color: #3b68ff;
+    box-shadow: 0 0 4px rgba(59, 104, 255, 0.5);
+}
+.achivement___group {
+    display: flex;
+    gap: 12px;              
+    align-items: center;    
+}
