@@ -26,10 +26,96 @@
 
 
 </main>
+<section class="profile">
+            <div class="container">
+                <div class="profile__content">
+                    <div class="profile__left">
+                        <div class="profile__avatar">
+                            <img class="profile__avatar-img" src="../img/stud_photo.jpeg" alt="Student Avatar">
+                        </div>
+                        <div class="profile__info">
+                            <h2 class="profile__name">Andrei Ermakov</h2>
+                            <div class="profile__edu">
+                                <h3 class="profile__faculty">Faculty:</h3>
+                                <h3 class="profile__faculty-name">Engineering and Informatics</h3>
+                            </div>
+                            <div class="profile__edu">
+                                <h3 class="profile__program">Program:</h3>
+                                <h3 class="profile__program-name">Computer Science</h3>
+                            </div>
+                            <div class="profile__edu">
+                                <h3 class="profile__id">Admin IDs:</h3>
+                                <h3 class="profile__id-num">123456</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
 
 
 <!-- Spacer so content doesn't go under header -->
 <div style="height: 80px;"></div>
+<div class="container">
+
+    <h1 class="title">Student Requests</h1>
+
+    <!-- TABLE OF REQUESTS -->
+    <table class="request-table">
+        <thead>
+            <tr>
+                <th>#order</th>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Group</th>
+                <th>Activity</th>
+                <th>Coins</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="student-row">
+                <td>1</td>
+                <td>1254</td>
+                <td>Gairatbekov Kasymbek</td>
+                <td>ComCEH</td>
+                <td>Hackathon</td>
+                <td>15</td>
+            </tr>
+
+            <tr class="student-row">
+                <td>2</td>
+                <td>2210</td>
+                <td>Asanov Usen</td>
+                <td>ComSe</td>
+                <td>Volunteering</td>
+                <td>11</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Example Request Box -->
+    <div class="request-box">
+    <h2 class="student-name">Gairatbekov Kasymbek</h2>
+
+    <div class="info-row"><span>ID:</span> 230141039</div>
+    <div class="info-row"><span>Group:</span> ComCEH</div>
+    <div class="info-row"><span>Activity:</span> Hackathon</div>
+    <div class="info-row"><span>Coins:</span> 15</div>
+
+    <div class="info-row">
+        <span>Pinned Link:</span>
+        <a href="#" class="pinned-link">https://example.com/certificate.pdf</a>
+    </div>
+
+    <div class="buttons">
+        <button class="reject">Reject</button>
+        <button class="remake">Remake</button>
+        <button class="accept">Accept</button>
+    </div>
+</div>
+</div>
 
 </body>
 </html>

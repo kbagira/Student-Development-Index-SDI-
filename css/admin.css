@@ -53,3 +53,57 @@
     border-radius: 100%;
     object-fit: cover;
 }
+/* REQUEST BOX */
+.request-box {
+    margin-top: 30px;
+    padding: 25px;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    background: white;
+    width: 70%;
+}
+
+.request-box p {
+    margin: 6px 0;
+}
+
+.input-link {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+/* BUTTONS */
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
+.reject {
+    background: #ff4b4b;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.remake {
+    background: #bfbfbf;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.accept {
+    background: #3ebf4c;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* BUTTON HOVER */
+.reject:hover {
+    background: #e63e3e;
+}
