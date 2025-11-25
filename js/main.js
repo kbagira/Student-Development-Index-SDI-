@@ -14,6 +14,7 @@ if (!localStorage.getItem("students")) {
                 {
                     description: "Environmental clean-up",
                     category: "Volunteering",
+                    subcategory: "Event Support",
                     status: "Approved",
                     coins: 20
                 },
@@ -21,7 +22,7 @@ if (!localStorage.getItem("students")) {
                     description: "Robotics competition",
                     category: "Competition",
                     status: "Pending",
-                    coins: 15
+                    coins: 0
                 }
             ]
         },

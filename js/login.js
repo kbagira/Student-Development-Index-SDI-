@@ -1,19 +1,29 @@
-document.querySelector(".login__form").addEventListener("submit", function () {
-    const studentNumber = document.getElementById("studentNumber").value.trim();
-    const password = document.getElementById("password").value.trim();
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".login__form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const studentNumber = document.getElementById("studentNumber").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-    const students = JSON.parse(localStorage.getItem("students")) || [];
+        if (!studentNumber || !password) {
+            alert("Please enter your login and password");
+            return;
+        }
 
-    const found = students.find(
-        s => s.studentNumber === studentNumber && s.password === password
-    );
+        const students = JSON.parse(localStorage.getItem("students")) || [];
 
-    if (!found) {
-        alert("Incorrect student number or password");
-        return;
-    }
-    localStorage.setItem("currentStudent", JSON.stringify(found));
+        const user = students.find(s =>
+            s.studentNumber === studentNumber && s.password === password
+        );
 
-    window.location.href = "./pages/profile.html";
+        if (!user) {
+            alert("Incorrect student number or password");
+            return;
+        }
+
+        localStorage.setItem("currentStudent", JSON.stringify(user));
+        window.location.href = "./pages/profile.html";
+    });
 });
+
 
