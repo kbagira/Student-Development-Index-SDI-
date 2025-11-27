@@ -35,28 +35,7 @@
     <h1>Student Ranking</h1>
 
     <div class="top-panel">
-        <input type="text" class="search" placeholder="Search by Name or ID">
-
-        <div class="achivement___group">
-        <select class="select-box">
-        <option disabled selected>Category</option>
-        <option>Hackathon</option>
-        <option>Awards</option>
-        <option>Volunteering</option>
-        <option>Sports</option>
-        <option>Conference</option>
-        <option>Competition</option>
-    </select>
-
-    <select class="select-box">
-        <option disabled selected>Group</option>
-        <option>ComCEH</option>
-        <option>ComSE</option>
-        <option>EAIR</option>
-        <option>MatMIE</option>
-        <option>MatDies</option>
-    </select>
-        </div>
+        <input id="search-input" type="text" class="search" placeholder="Search by Name or ID">
     </div>
 
     <table class="ranking-table">
@@ -65,28 +44,44 @@
                 <th>#</th>
                 <th>ID</th>
                 <th>Student Name</th>
-                <th>Group</th>
+                <th>
+                    <select id="filter-faculty" class="select-box">
+                        <option value="">Faculty</option>
+                        <option>Engineering</option>
+                        <option>Social Science</option>
+                        <option>Humanity</option>
+                        <option>Economics</option>
+                        <option>Medicine</option>
+                    </select>
+                </th>
+
+                <th>
+                    <select id="filter-group" class="select-box">
+                        <option value="">Group</option>
+                        <option>ComCEH</option>
+                        <option>ComSE</option>
+                        <option>EAIR</option>
+                        <option>MatMIE</option>
+                        <option>MatDies</option>
+                    </select>
+                </th>
+
+                <th>
+                    <select id="filter-year" class="select-box">
+                        <option value="">Year</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                    </select>
+                </th>
                 <th>Total Coins</th>
             </tr>
         </thead>
 
-        <tbody>
-            <tr onclick="window.location.href='../pages/profile.html'" style="cursor: pointer;">
-                <td>1</td>
-                <td>1254</td>
-                <td>Gairatbekov Kasymbek</td>
-                <td>ComCEH</td>
-                <td>139</td>
-            </tr>
-
-            <tr onclick="window.location='student.html'">
-                <td>2</td>
-                <td>2210</td>
-                <td>Asanov Usen</td>
-                <td>ComSe</td>
-                <td>125</td>
-            </tr>
-
+        <tbody id = "students-table">
+            
         </tbody>
     </table>
 
@@ -95,4 +90,5 @@
 
 </body>
 <script src="../js/profile.js"></script>
+<script src="../js/student.js"></script>
 </html>
